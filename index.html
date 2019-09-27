@@ -7,24 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./style.css" rel="stylesheet" type="text/css" />
     <title>Cafe`</title>
+
 </head>
 
 <body>
     <nav>
-        <span>Cafe`</span>
+        <a href="#">Cafe`</a>
         <ul>
             <li><a href="#About">About</a></li>
             <li><a href="#Menu">Menu</a></li>
             <li><a href="#Contact">Contact</a></li>
         </ul>
     </nav>
-    <img src="./imgs/placeholders/nathan-dumlao-KixfBEdyp64-unsplash.jpg" alt="coffe on cutting board from above" />
+    <img id="page-topper" src="./imgs/placeholders/nathan-dumlao-KixfBEdyp64-unsplash.jpg"
+        alt="coffe on cutting board from above" />
+    <div id="page-start"></div>
     <section id="About">
-        <div id="about-pics">
-            <img src="./imgs/placeholders/brooke-cagle-9fHMo1-5Io8-unsplash.jpg" />
-            <img src="/imgs//placeholders/cyril-saulnier-mpSMThAU4OY-unsplash.jpg" />
-        </div>
-        <div id="about-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque nesciunt placeat quisquam
+        <img src="./imgs/placeholders/brooke-cagle-9fHMo1-5Io8-unsplash.jpg" />
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque nesciunt placeat quisquam
             aliquam sequi dolorem veniam in assumenda laboriosam, facilis earum rem eveniet laborum cupiditate harum
             maiores, porro nemo. Odio, totam nulla? Quibusdam enim, dignissimos magni possimus blanditiis adipisci atque
             doloremque nemo laborum tempore itaque veniam neque aut quia! Nihil soluta voluptatum adipisci architecto,
@@ -38,11 +38,13 @@
             id delectus quae deleniti, atque quas voluptatibus totam dolor facere minima sequi. Velit accusantium quae
             aliquid maxime? Sequi voluptas asperiores recusandae voluptatibus amet nesciunt aut, iure adipisci eos?
             Iure, veniam fuga quae magnam odio ex eius velit quisquam autem consequatur laboriosam optio a accusantium
-            suscipit veritatis ipsam nisi?</div>
+            suscipit veritatis ipsam nisi?</p>
     </section>
+
     <section id="Menu">
+        <h2>- Our Menu -</h2>
         <ul>
-            <li>Drinks</li>
+            <li class="active-menu">Drinks</li>
             <li>Food</li>
         </ul>
         <div id="menu-content">
@@ -232,7 +234,7 @@
     </section>
     <section id="Contact"></section>
 
-
+    <script src="./scripts.js"></script>
 </body>
 
 </html>
