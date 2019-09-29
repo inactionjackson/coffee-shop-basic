@@ -69,18 +69,20 @@ nav > ul > li {
 }
 /*endregion: nav - page start*/
 #About {
-  height: 600px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  background-color: white;
 }
 #About > img {
   width: 20vw;
-  float: left;
   margin: 30px;
 }
 #About > p{
   padding:40px;
   font-size: 1.6rem;
-  line-height: 2rem;
-  background-color: white;
+  line-height: 2.5rem;
+  
   text-indent: 4rem;
 }
 
@@ -104,4 +106,24 @@ h2{
 }
 .active-menu{
   background-color: white;
+}
+
+#menu-content{
+  width:80vw;
+  display:grid;
+  grid-template-columns: 30% 70%;
+  column-gap: 50px;
+  margin:20px auto;
+}
+#menu-list{
+  display: inline-block;
+}
+
+.menu-picture{
+  display: none;
+  width:90%;
+  margin:100px auto 0 auto;
+}
+.active{
+  display:block;
 }
