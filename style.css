@@ -15,7 +15,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+button:focus {
+  outline:0;
+}
 img {
   display: block;
   max-width: 100%;
@@ -23,7 +25,7 @@ img {
 }
 section{
   scroll-snap-align: start;
-  scroll-margin-top: 40px;
+  scroll-margin-top: 38px;
 }
 /*region: nav - page start*/
 nav {
@@ -57,7 +59,7 @@ nav > ul > li {
 }
 .nav-animated > a,
 .nav-animated > ul {
-  transition: margin-top 0.5s, font-size 0.5s;
+  transition: margin-top 0.3s, font-size 0.3s;
 }
 #page-start {
   position: sticky;
@@ -92,33 +94,83 @@ h2{
   text-decoration: underline;
   background-color: rgb(51, 11, 11);
   color:white;
-  margin-bottom:10px;
   padding-bottom: 10px;
+}
+#Menu>ul{
+  padding:10px 0 0 10px;
+  background-color: white;
+}
+.sticky{
+  position: sticky;
 }
 #Menu>ul>li{
   display: inline-block;
-  padding: 0;
-  width:30vw;
+  padding-right: 20px;
   font-size: 2rem;
   font-weight: bold;
   text-decoration: underline;
   text-align: center;
 }
+.menu-toggle{
+  font-size:2rem;
+  font-weight:bold;
+  background-color:rgb(165, 184, 179);
+  
+  border:none;
+  padding:5px 100px;
+  border-radius: 15px 15px 0px 0px;
+  -moz-border-radius: 15px 15px 0px 0px;
+  -webkit-border-radius: 15px 15px 0px 0px;
+  /* border: 1px solid #000000; */
+  border-bottom:none;
+}
+.menu-toggle:hover{
+  -webkit-box-shadow: 0px -2px 8px 1px rgba(0,0,0,0.38);
+-moz-box-shadow: 0px -2px 8px 1px rgba(0,0,0,0.38);
+box-shadow: 0px -2px 8px 1px rgba(0,0,0,0.38);
+background-color:#DADEDD;
+}
 .active-menu{
-  background-color: white;
+  background-color:#DADEDD;
+ /* border:2px solid black; */
+ border-bottom:none;
 }
 
 #menu-content{
   width:80vw;
   display:grid;
   grid-template-columns: 30% 70%;
-  column-gap: 50px;
+  column-gap: 30px;
   margin:20px auto;
+  /* background-color:white; */
 }
 #menu-list{
   display: inline-block;
+  padding-right:40px;
 }
-
+#menu-list > ul{
+  list-style: none;
+  
+}
+#menu-list > ul > li{
+  border-bottom:1px solid black;
+  margin-bottom:10px;
+  
+}
+#menu-list > ul>li:last-child{
+  border:none;
+}
+.item-name{
+  font-size:2.5rem;
+  font-weight: bold;
+}
+.item-price{
+  float:right;
+  font-size:1.6rem;
+}
+.item-desc{
+  padding:5px 20px;
+}
 .menu-picture{
   display: none;
   width:90%;
@@ -126,4 +178,25 @@ h2{
 }
 .active{
   display:block;
+}
+
+#Contact{
+  background-color: white;
+}
+.contact-info{
+  text-align: center;
+  font-size: 3rem;
+  font-weight:bold;
+}
+.contact-info > p{
+  width:80%;
+  padding:20px 0;
+  margin:auto;
+  color:#392D22;
+}
+.contact-info > p:first-child{
+  border-bottom:2px solid black;
+}
+.contact-info > p > span{
+  color:black;
 }

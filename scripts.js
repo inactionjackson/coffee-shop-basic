@@ -78,7 +78,7 @@
     const foodMenu = placeholderFoodMenu;
     const drinkMenu = placeholderDrinkMenu;
     const drinkMenuPictureSrc = '/imgs/placeholders/nathan-dumlao-vbt-Fp3b5FA-unsplash.jpg';
-    const foodMenuPictureSrc = '';
+    const foodMenuPictureSrc = '/imgs/placeholders/nathan-dumlao-vbt-Fp3b5FA-unsplash.jpg';
 
     const toggleMenuHandler = (e, manualMenu) => {
         let target = "";
@@ -104,6 +104,13 @@
                 }
             })
         }
+        document.querySelectorAll(".menu-toggle").forEach(el => {
+            if (el.getAttribute("data-target") === target) {
+                el.classList.add("active-menu");
+            } else {
+                el.classList.remove("active-menu");
+            }
+        });
         switch (target) {
             case "menu-drink":
                 document.querySelector("#menu-list").innerHTML = fillMenu(drinkMenu);
