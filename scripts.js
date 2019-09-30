@@ -47,23 +47,6 @@
         changeNavClasses(true, false);
     }
     window.addEventListener("scroll", navScrollHandler);
-    /** force scroll to location, causing jittering with css smooth scroll */
-    // const scrollDownToPageStart = animated => {
-    //   changeNavClasses(true, animated);
-    //   const ScrollBehavior = animated ? "smooth" : "auto";
-    //   window.scroll({
-    //     top: pageStartPos,
-    //     left: 0,
-    //     behavior: ScrollBehavior
-    //   });
-    // };
-
-    // const scrollUpToPageTopper = animated => {
-    //   changeNavClasses(false, animated);
-    //   const ScrollBehavior = animated ? "smooth" : "auto";
-    //   window.scroll({ top: 0, left: 0, behavior: ScrollBehavior });
-    // };
-
     //#endregion (nav scrolling)
 
     const placeholderDesc = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi sint

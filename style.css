@@ -1,6 +1,8 @@
 html{
+  --scroll-behavior: smooth;
   scroll-behavior: smooth;
   scroll-snap-type: y proximity;
+  font-family: "scroll-behavior: smooth", sans-serif; /* smooth scroll polyfill*/
 }
 body{
   background-color: #DADEDD;
@@ -26,6 +28,7 @@ img {
 section{
   scroll-snap-align: start;
   scroll-margin-top: 38px;
+  min-height: 100vh;
 }
 /*region: nav - page start*/
 nav {
@@ -61,6 +64,10 @@ nav > ul > li {
 .nav-animated > ul {
   transition: margin-top 0.3s, font-size 0.3s;
 }
+#page-topper{
+  width: 100%;
+  image-rendering: crisp-edges;
+}
 #page-start {
   position: sticky;
   -webkit-position: sticky;
@@ -73,11 +80,11 @@ nav > ul > li {
 #About {
   height: auto;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 30% 70%;
   background-color: white;
 }
 #About > img {
-  width: 20vw;
+  width: 100%;
   margin: 30px;
 }
 #About > p{
@@ -181,12 +188,19 @@ background-color:#DADEDD;
 }
 
 #Contact{
-  background-color: white;
+  background-image: url("/imgs/1080p_the-creative-exchange-d1ngW7SNehM-unsplash.jpg");
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .contact-info{
   text-align: center;
   font-size: 3rem;
   font-weight:bold;
+  margin:auto;
+  width:100%;
+  background-color:rgba(247, 228, 223, 0.7);
 }
 .contact-info > p{
   width:80%;
@@ -199,4 +213,57 @@ background-color:#DADEDD;
 }
 .contact-info > p > span{
   color:black;
+}
+.for-mobile{
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  #menu-content{
+    display:block;
+  }
+  .menu-picture{
+    display:none;
+  }
+  .for-mobile{
+    display:block;
+  }
+  .for-desktop{
+    display:none;
+  }
+  #About{
+    grid-template-columns: 100%;
+    grid-template-rows: auto 100%;
+    gap: 0;
+  }
+  #About>img{
+    padding:30px;
+    margin:0;
+  }
+  .menu-toggle{
+    font-size:2rem; 
+    padding:5px 10px;
+  }
+ }
+
+ @media (max-width: 580px) {
+
+  #About>img{
+    display:none;
+  }
+  nav{
+    background-color:black;
+  }
+  nav >a{
+    display:none;
+  }
+  nav > ul{
+    float: none;
+    width:100%;
+    text-align: center;
+  }
+
+  .contact-info{
+    font-size: 2rem;
+  }
 }
