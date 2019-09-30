@@ -52,14 +52,19 @@
     const placeholderDesc = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi sint
  alias culpa quibusdam deleniti incidunt soluta tenetur.`;
     const getRandPrice = (min, max) => {
-        return Math.max(Math.random() * max, min);
+        return Math.max(Math.random() * max, min).toFixed(2);
     }
-    const placeholderFoodMenu = new Array(20).fill({ name: "Food item", price: "$" + getRandPrice(.99, 12).toFixed(2), desc: placeholderDesc });
-    const placeholderDrinkMenu = new Array(20).fill({ name: "Drink item", price: "$" + Math.max(Math.random() * 50, 3.99).toFixed(2), desc: placeholderDesc });
+    const placeholderFoodMenu = new Array(20).fill({ name: "Food item", desc: placeholderDesc });
+
+    const placeholderDrinkMenu = new Array(20).fill({ name: "Drink item", desc: placeholderDesc });
 
     //TODO: replace menus with actual list from ajax call
-    const foodMenu = placeholderFoodMenu;
-    const drinkMenu = placeholderDrinkMenu;
+    const foodMenu = placeholderFoodMenu.map(item => {
+        return { ...item, price: "$" + getRandPrice(3.99, 24.99) };
+    });
+    const drinkMenu = placeholderDrinkMenu.map(item => {
+        return { ...item, price: "$" + getRandPrice(.99, 12.99) };
+    });
     const drinkMenuPictureSrc = '/imgs/placeholders/nathan-dumlao-vbt-Fp3b5FA-unsplash.jpg';
     const foodMenuPictureSrc = '/imgs/placeholders/nathan-dumlao-vbt-Fp3b5FA-unsplash.jpg';
 
